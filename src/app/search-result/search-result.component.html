@@ -1,0 +1,13 @@
+<div class="content-container">
+  <button mat-raised-button color="primary" (click)="onLoadClick()">Load</button>
+  <button mat-raised-button color="primary" class="nop-button">NOP button</button>
+  <!-- <a (click)="onLoadClick()" href="#">Load</a> -->
+
+  <div class="table-container">
+    <!-- Does not work -->
+    <app-search-result-table *ngIf="searchResult.length" [searchResult]="searchResult"></app-search-result-table>
+
+    <!-- Works -->
+    <!-- <app-search-result-table [hidden]="!searchResult.length" [searchResult]="searchResult"></app-search-result-table> -->
+  </div>
+</div>
